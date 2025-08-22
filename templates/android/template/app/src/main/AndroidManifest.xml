@@ -15,6 +15,12 @@
 		<meta-data android:name="SDL_ENV.SDL_IOS_ORIENTATIONS" android:value="LandscapeLeft LandscapeRight" />
 		::end::
 
+		<meta-data android:name="android.game_mode_config" android:resource="@xml/game_mode_config" />
+
+		<meta-data android:name="com.android.app.gamemode.performance.enabled" android:value="true"/>
+
+		<meta-data android:name="com.android.app.gamemode.battery.enabled" android:value="true"/>
+
 		<activity ::foreach ANDROID_ACTIVITY::::if ((value != null) && (value != ""))::::key::="::value::" ::end::::end::>
 
 			<intent-filter>
